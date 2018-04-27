@@ -1,5 +1,7 @@
 # require-cjs-string [![npm-version][npm-badge]][npm-link]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/amio/require-cjs-string.svg)](https://greenkeeper.io/)
+
 Load commonjs module from string in Node & Browser.
 
 ## Install
