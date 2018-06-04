@@ -1,6 +1,6 @@
 # require-cjs-string [![npm-version][npm-badge]][npm-link]
 
-Load commonjs module from string in Node & Browser.
+Dynamic eval commonjs/umd module from string in Node & Browser.
 
 ## Install
 
@@ -11,9 +11,30 @@ npm install require-cjs-string
 ## Usage
 
 ```javascript
-const requireCJSString = require('require-cjs-string')
+const rcs = require('require-cjs-string')
 
-requireCJSString('module.exports = 1')  // => 1
+rcs('module.exports = 1')  // => 1
+```
+
+More Examples:
+
+```javascript
+const rcs = require('require-cjs-string')
+
+const { sqrt, square } = rcs(`
+  exports.sqrt = Math.sqrt;
+  exports.square = x => x * x;
+`)
+square(12)  // => 144
+sqrt(36)    // => 6
+
+const fn = rcs(`
+  module.exports = (x, y) => {
+    var z = x + y;
+    return z * z * z;
+  }
+`)
+fn(3, 4)    // => 343
 ```
 
 ## License
