@@ -1,6 +1,6 @@
 {
   "name": "require-cjs-string",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Load commonjs module from string in Node & Browser.",
   "repository": "https://github.com/amio/require-cjs-string",
   "author": "Amio <amio.cn@gmail.com>",
